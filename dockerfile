@@ -1,3 +1,3 @@
 FROM tomcat:9.0
 
-COPY sample.war $CATALINA_HOME/wabapps/
+COPY sample.war /usr/local/tomcat/wabapps/
