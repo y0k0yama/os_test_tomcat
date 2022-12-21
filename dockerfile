@@ -1,3 +1,7 @@
 FROM tomcat:9.0
 
-COPY sample.war /usr/local/tomcat/wabapps/sample.war
+ENV CATALINA_HOME /usr/local/tomcat
+ENV PATH $CATALINA_HOME/bin:$PATH
+WORKDIR $CATALINA_HOME
+
+COPY sample.war wabapps/sample.war
